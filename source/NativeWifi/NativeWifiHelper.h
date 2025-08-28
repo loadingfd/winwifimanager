@@ -20,6 +20,8 @@ namespace utils {
 			};
 		}
 
+		ULONG FrequencyToChannel(ULONG const freq_khz);
+
 		struct MacAddress {
 			DOT11_MAC_ADDRESS data;
 
@@ -32,6 +34,7 @@ namespace utils {
 			LONG rssi;
 			ULONG link_quality;
 			ULONG center_freq;
+			ULONG channel;
 
 			BssEntry(DOT11_SSID const& ssid_, MacAddress bssid_, LONG rssi_, ULONG link_quality_, ULONG center_freq_);
 		};

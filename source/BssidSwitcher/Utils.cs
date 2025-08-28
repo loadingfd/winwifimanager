@@ -28,5 +28,23 @@ namespace BssidSwitcher
                 action();
             }
         }
+
+        public static int FrequencyToChannel(uint freqInKhz)
+        {
+            if(freqInKhz >= 2412000 && freqInKhz <= 2472000) // Channels 1-13 for 2.4GHz
+            {
+                return (int)((freqInKhz - 2407000) / 5000);
+            }
+            if(freqInKhz == 2484000) // Channel 14 for 2.4GHz
+            {
+                return 14;
+            }
+            if(freqInKhz >= 5180000 && freqInKhz <= 5825000) // 5GHz
+            {
+                return (int)((freqInKhz - 5000000) / 5000);
+            }
+            return 0; // Unknown
+        }
+
     }
 }

@@ -5,6 +5,22 @@
 
 namespace utils {
 	namespace NativeWifi {
+		ULONG FrequencyToChannel(ULONG const freq_khz) {
+			ULONG freq_mhz = freq_khz / 1000;
+			if (freq_mhz >= 2412 && freq_mhz <= 2472) { // 2.4 GHz band channels 1-13
+				return (freq_mhz - 2412) / 5 + 1;
+			}
+			if (freq_mhz == 2484) { // 2.4 GHz band channel 14
+				return 14;
+			}
+			if (freq_mhz >= 5180 && freq_mhz <= 5825) { // 5 GHz band
+				return (freq_mhz - 5000) / 5;
+			}
+			// Other bands not supported, return 0
+			return 0;
+		}
+
+
 		auto WifiNetworkListCombo(HANDLE const handle, GUID const& iface)->std::pair<DWORD, std::unique_ptr<WifiNetworkList>> {
 			DWORD err;
 			std::unique_ptr<WifiNetworkList> ret;
@@ -66,6 +82,8 @@ namespace utils {
 		MacAddress::MacAddress(const DOT11_MAC_ADDRESS p) { memcpy(data, p, 6); }
 
 		BssEntry::BssEntry(DOT11_SSID const& ssid_, MacAddress bssid_, LONG rssi_, ULONG link_quality_, ULONG center_freq_) :
-			ssid{ ssid_ }, bssid{ bssid_ }, rssi{ rssi_ }, link_quality{ link_quality_ }, center_freq{ center_freq_ } {}
+			ssid{ ssid_ }, bssid{ bssid_ }, rssi{ rssi_ }, link_quality{ link_quality_ }, center_freq{ center_freq_ }, channel{ FrequencyToChannel(center_freq_) } {
+		}
+		
 	}
 }

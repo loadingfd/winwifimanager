@@ -180,7 +180,7 @@ namespace BssidSwitcher
             RunAndHandleEx(() => { availNetworks_ = wifiMan_.GetAvailableNetworks((InterfaceInfo)listInterfaces.SelectedItem); });
             Func<WifiNetwork, ListViewItem> listItemGenerator = (WifiNetwork net) =>
             {
-                var ret = new ListViewItem(new string[] { $"{net.LinkQuality}%", net.SSID, Utils.MacStringify(net.BSSID), $"{net.CenterFrequency / 1000}" });
+                var ret = new ListViewItem(new string[] { $"{net.LinkQuality}%", net.SSID, Utils.MacStringify(net.BSSID), $"{net.CenterFrequency / 1000}" }, $"{Utils.FrequencyToChannel(net.CenterFrequency)}");
                 ret.Tag = net;
                 return ret;
             };

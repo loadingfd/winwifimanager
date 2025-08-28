@@ -48,6 +48,7 @@
             this.colSSID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colBSSID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colFreq = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colChannel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mainLayout.SuspendLayout();
             this.interfaceSelectionLayout.SuspendLayout();
             this.commandsLayout.SuspendLayout();
@@ -65,14 +66,13 @@
             this.mainLayout.Controls.Add(this.listNetworks, 0, 1);
             this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLayout.Location = new System.Drawing.Point(0, 0);
-            this.mainLayout.Margin = new System.Windows.Forms.Padding(7);
             this.mainLayout.Name = "mainLayout";
             this.mainLayout.RowCount = 4;
             this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.mainLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.mainLayout.Size = new System.Drawing.Size(1204, 781);
+            this.mainLayout.Size = new System.Drawing.Size(516, 323);
             this.mainLayout.TabIndex = 0;
             // 
             // interfaceSelectionLayout
@@ -84,21 +84,19 @@
             this.interfaceSelectionLayout.Controls.Add(this.buttonRescan, 1, 0);
             this.interfaceSelectionLayout.Controls.Add(this.listInterfaces, 0, 0);
             this.interfaceSelectionLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.interfaceSelectionLayout.Location = new System.Drawing.Point(7, 7);
-            this.interfaceSelectionLayout.Margin = new System.Windows.Forms.Padding(7);
+            this.interfaceSelectionLayout.Location = new System.Drawing.Point(3, 3);
             this.interfaceSelectionLayout.Name = "interfaceSelectionLayout";
             this.interfaceSelectionLayout.RowCount = 1;
             this.interfaceSelectionLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.interfaceSelectionLayout.Size = new System.Drawing.Size(1190, 65);
+            this.interfaceSelectionLayout.Size = new System.Drawing.Size(510, 27);
             this.interfaceSelectionLayout.TabIndex = 1;
             // 
             // buttonRescan
             // 
             this.buttonRescan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonRescan.Location = new System.Drawing.Point(1008, 7);
-            this.buttonRescan.Margin = new System.Windows.Forms.Padding(7);
+            this.buttonRescan.Location = new System.Drawing.Point(432, 3);
             this.buttonRescan.Name = "buttonRescan";
-            this.buttonRescan.Size = new System.Drawing.Size(175, 51);
+            this.buttonRescan.Size = new System.Drawing.Size(75, 21);
             this.buttonRescan.TabIndex = 0;
             this.buttonRescan.Text = "&Rescan";
             this.buttonRescan.UseVisualStyleBackColor = true;
@@ -109,10 +107,9 @@
             this.listInterfaces.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listInterfaces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.listInterfaces.FormattingEnabled = true;
-            this.listInterfaces.Location = new System.Drawing.Point(9, 14);
-            this.listInterfaces.Margin = new System.Windows.Forms.Padding(7);
+            this.listInterfaces.Location = new System.Drawing.Point(3, 3);
             this.listInterfaces.Name = "listInterfaces";
-            this.listInterfaces.Size = new System.Drawing.Size(982, 37);
+            this.listInterfaces.Size = new System.Drawing.Size(423, 20);
             this.listInterfaces.TabIndex = 0;
             this.listInterfaces.SelectedIndexChanged += new System.EventHandler(this.listInterfaces_SelectedIndexChanged);
             // 
@@ -125,22 +122,20 @@
             this.commandsLayout.Controls.Add(this.buttonConnect, 1, 0);
             this.commandsLayout.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.commandsLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.commandsLayout.Location = new System.Drawing.Point(7, 645);
-            this.commandsLayout.Margin = new System.Windows.Forms.Padding(7);
+            this.commandsLayout.Location = new System.Drawing.Point(3, 265);
             this.commandsLayout.Name = "commandsLayout";
             this.commandsLayout.RowCount = 1;
             this.commandsLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.commandsLayout.Size = new System.Drawing.Size(1190, 79);
+            this.commandsLayout.Size = new System.Drawing.Size(510, 33);
             this.commandsLayout.TabIndex = 2;
             // 
             // buttonConnect
             // 
             this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonConnect.Enabled = false;
-            this.buttonConnect.Location = new System.Drawing.Point(1008, 14);
-            this.buttonConnect.Margin = new System.Windows.Forms.Padding(7);
+            this.buttonConnect.Location = new System.Drawing.Point(432, 6);
             this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(175, 51);
+            this.buttonConnect.Size = new System.Drawing.Size(75, 21);
             this.buttonConnect.TabIndex = 0;
             this.buttonConnect.Text = "&Connect";
             this.buttonConnect.UseVisualStyleBackColor = true;
@@ -154,10 +149,9 @@
             this.flowLayoutPanel1.Controls.Add(this.buttonEditFilter);
             this.flowLayoutPanel1.Controls.Add(this.labelFilteredNetworks);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 7);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(7);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(987, 65);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(423, 27);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -165,10 +159,9 @@
             // 
             this.toggleFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.toggleFilter.AutoSize = true;
-            this.toggleFilter.Location = new System.Drawing.Point(7, 16);
-            this.toggleFilter.Margin = new System.Windows.Forms.Padding(7);
+            this.toggleFilter.Location = new System.Drawing.Point(3, 5);
             this.toggleFilter.Name = "toggleFilter";
-            this.toggleFilter.Size = new System.Drawing.Size(189, 33);
+            this.toggleFilter.Size = new System.Drawing.Size(114, 16);
             this.toggleFilter.TabIndex = 4;
             this.toggleFilter.Text = "Activate &Filter";
             this.toggleFilter.UseVisualStyleBackColor = true;
@@ -177,10 +170,9 @@
             // buttonEditFilter
             // 
             this.buttonEditFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEditFilter.Location = new System.Drawing.Point(210, 7);
-            this.buttonEditFilter.Margin = new System.Windows.Forms.Padding(7);
+            this.buttonEditFilter.Location = new System.Drawing.Point(123, 3);
             this.buttonEditFilter.Name = "buttonEditFilter";
-            this.buttonEditFilter.Size = new System.Drawing.Size(222, 51);
+            this.buttonEditFilter.Size = new System.Drawing.Size(95, 21);
             this.buttonEditFilter.TabIndex = 3;
             this.buttonEditFilter.Text = "&Edit Filter";
             this.buttonEditFilter.UseVisualStyleBackColor = true;
@@ -190,10 +182,9 @@
             // 
             this.labelFilteredNetworks.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelFilteredNetworks.AutoSize = true;
-            this.labelFilteredNetworks.Location = new System.Drawing.Point(446, 18);
-            this.labelFilteredNetworks.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.labelFilteredNetworks.Location = new System.Drawing.Point(224, 7);
             this.labelFilteredNetworks.Name = "labelFilteredNetworks";
-            this.labelFilteredNetworks.Size = new System.Drawing.Size(296, 29);
+            this.labelFilteredNetworks.Size = new System.Drawing.Size(173, 12);
             this.labelFilteredNetworks.TabIndex = 5;
             this.labelFilteredNetworks.Text = "(0 of 100 networks filtered)";
             // 
@@ -204,30 +195,29 @@
             this.labelNetworkState,
             this.labelSeparator1,
             this.progressIndicator});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 731);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 301);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 33, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1204, 50);
+            this.statusStrip1.Size = new System.Drawing.Size(516, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // labelNetworkState
             // 
             this.labelNetworkState.Name = "labelNetworkState";
-            this.labelNetworkState.Size = new System.Drawing.Size(184, 39);
+            this.labelNetworkState.Size = new System.Drawing.Size(91, 17);
             this.labelNetworkState.Text = "Network State";
             // 
             // labelSeparator1
             // 
             this.labelSeparator1.Name = "labelSeparator1";
-            this.labelSeparator1.Size = new System.Drawing.Size(748, 39);
+            this.labelSeparator1.Size = new System.Drawing.Size(308, 17);
             this.labelSeparator1.Spring = true;
             // 
             // progressIndicator
             // 
             this.progressIndicator.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.progressIndicator.Name = "progressIndicator";
-            this.progressIndicator.Size = new System.Drawing.Size(233, 36);
+            this.progressIndicator.Size = new System.Drawing.Size(100, 16);
             this.progressIndicator.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             // 
             // listNetworks
@@ -236,15 +226,15 @@
             this.colSignalStrength,
             this.colSSID,
             this.colBSSID,
-            this.colFreq});
+            this.colFreq,
+            this.colChannel});
             this.listNetworks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listNetworks.FullRowSelect = true;
             this.listNetworks.HideSelection = false;
-            this.listNetworks.Location = new System.Drawing.Point(7, 86);
-            this.listNetworks.Margin = new System.Windows.Forms.Padding(7);
+            this.listNetworks.Location = new System.Drawing.Point(3, 36);
             this.listNetworks.MultiSelect = false;
             this.listNetworks.Name = "listNetworks";
-            this.listNetworks.Size = new System.Drawing.Size(1190, 545);
+            this.listNetworks.Size = new System.Drawing.Size(510, 223);
             this.listNetworks.TabIndex = 3;
             this.listNetworks.UseCompatibleStateImageBehavior = false;
             this.listNetworks.View = System.Windows.Forms.View.Details;
@@ -259,7 +249,7 @@
             // colSSID
             // 
             this.colSSID.Text = "SSID";
-            this.colSSID.Width = 250;
+            this.colSSID.Width = 182;
             // 
             // colBSSID
             // 
@@ -271,15 +261,18 @@
             this.colFreq.Text = "Freq MHz";
             this.colFreq.Width = 75;
             // 
+            // colChannel
+            // 
+            this.colChannel.Text = "信道";
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 781);
+            this.ClientSize = new System.Drawing.Size(516, 323);
             this.Controls.Add(this.mainLayout);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(7);
-            this.MinimumSize = new System.Drawing.Size(1183, 648);
+            this.MinimumSize = new System.Drawing.Size(516, 291);
             this.Name = "FormMain";
             this.Text = "Wi-Fi Manager";
             this.Load += new System.EventHandler(this.FormMain_Load);
@@ -317,5 +310,6 @@
         private System.Windows.Forms.ColumnHeader colBSSID;
         private System.Windows.Forms.ColumnHeader colFreq;
         private System.Windows.Forms.Label labelFilteredNetworks;
+        private System.Windows.Forms.ColumnHeader colChannel;
     }
 }
